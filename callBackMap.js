@@ -16,10 +16,12 @@ const mix = map(words, function(word) {
 
 function map(array,fn) {
 	let newArray = [];
-	for(i=0; i <array.length;i++){
-		newArray.push(fn(array[i]));
+	array.forEach(function(e) {
+		newArray.push(fn(e));
+	})
+		
 
-	}
+	
 	return newArray;
 }
 
